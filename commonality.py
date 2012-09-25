@@ -2,7 +2,7 @@
 
 """Quick and dirty"""
 
-from sys import argv, stderr
+from sys import argv, stderr, stdout
 from os import chdir, listdir
 from os.path import join, isdir, split
 from time import asctime
@@ -82,6 +82,6 @@ for fout in workds:
         print
     else:
         print
-
+    stdout.flush()
 
 print 'finished generating', asctime()
