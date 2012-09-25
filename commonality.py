@@ -35,7 +35,7 @@ except ImportError:
 if len(argv) not in [3,4]:
     print >>stderr, 'USAGE: commonality git_repos_parent_directory_or_git_directory branch1 [branch2]'
     print >>stderr
-    print >>stderr, 'print a list of commits that vary between the two repos'
+    print >>stderr, 'print a list of commits that vary between the two branches'
     print >>stderr, 'branch2 defaults to master'
     exit(1)
 
