@@ -67,10 +67,10 @@ for fout in workds:
     for primary, secondary  in [(base, target), (target, base)]:
         text = primary.split('/')[-1].upper() + '-ONLY'
         altstuff = check_output(['git', 'log', common+'..'+secondary])
-        pristuff = check_output(['git', 'log', common+'..'+secondary])
+        pristuff = check_output(['git', 'log', common+'..'+primary])
         for change in check_output(['git', 'log', '--format=%H', 
                                     common+'..'+primary]).split():
-            if '(cherry picked from commit '+change+')' in altstuff:
+            if '(cherry picked from commit '+change[:16] in altstuff:
                 status = 'CHERRYPICKED'
             else:
                 status = text
