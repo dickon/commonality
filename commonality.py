@@ -79,9 +79,6 @@ for fout in workds:
             print ('%20s' % status), out, change[:8], ' '.join(stuff)
     if identical:
         print ' '*20, out, 'IDENTICAL!'
-        print
-    else:
-        print
     stdout.flush()
 
 print 'finished generating', asctime()
